@@ -1,0 +1,28 @@
+// question// https://hack.codingblocks.com/app/contests/2635/161/problem
+
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc= new Scanner(System.in);
+        long n = sc.nextLong();
+       // long n=102;
+        long sum=0;
+        long t=1;
+        while(n!=0){
+            int rem=(int)(n%10) ;
+            if(rem!=0){
+                sum+=rem*t;
+            }else {
+                sum+=5*t;
+            }
+            t=t*10;
+            n=n/10;
+        }
+        if(sum==0)
+           System.out.println(5);
+        else
+           System.out.println(sum);
+           
+
+    }
+}
